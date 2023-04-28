@@ -10,7 +10,15 @@
 
 <body>
     <div class="盒子"></div>
+    <div class="js"></div>
+
     <script>
+        //         const code = `
+        // 令 变量甲 为 123；
+        // 令 变量乙 为 456；
+        // 令 变量甲乙和 为 甲 加 乙；
+        // 控制台输出（变量甲乙）；
+        // `;
         const 控制台输出 = (va) => { console.log(va) }
         const 浏览器 = { 弹窗: (value) => { window.alert(value) }, 获取屏幕参数: () => { return window.clientInformation }, }
         const 元素样式 = {
@@ -19,12 +27,54 @@
             设置背景颜色: (ele, va) => { ele.style.backgroundColor = va }
         }
         const 通过类名获取元素 = (className) => { return document.querySelector(className) }
- // ------------------------------------------------------------------------------------------------------------
-        控制台输出("我是SJL语言")
-        浏览器.弹窗("sjl")
-        元素样式.设置宽度(通过类名获取元素(".盒子"),500)
-        元素样式.设置高度(通过类名获取元素(".盒子"),800)
-        元素样式.设置背景颜色(通过类名获取元素(".盒子"),"#f00")
+        const 事件 = {
+            单击: (ele, fn) => { ele.addEventListener('click', () => { fn && fn() }) },
+            双击: (ele, fn) => { ele.addEventListener('dblclick', () => { fn && fn() }) }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        控制台输出('你好123')
+        元素样式.设置背景颜色(通过类名获取元素('.盒子'), '#f00');
+        元素样式.设置宽度(通过类名获取元素('.盒子'), 500);
+        元素样式.设置高度(通过类名获取元素('.盒子'), 800);        
+        事件.单击(通过类名获取元素(".盒子"), () => { 浏览器.弹窗("你好!这里是汉化版的JavaScript") })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
+    <script src="./sjl.1.2.js"></script>
 </body>
+
 </html>
