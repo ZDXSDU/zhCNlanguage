@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="盒子"></div>
+    <script>
+        const 控制台输出 = (va) => { console.log(va) }
+        const 浏览器 = { 弹窗: (value) => { window.alert(value) }, 获取屏幕参数: () => { return window.clientInformation }, }
+        const 元素样式 = {
+            设置宽度: (ele, va) => { ele.style.width = va + 'px' },
+            设置高度: (ele, va) => { ele.style.height = va + 'px' },
+            设置背景颜色: (ele, va) => { ele.style.backgroundColor = va }
+        }
+        const 通过类名获取元素 = (className) => { return document.querySelector(className) }
+ // ------------------------------------------------------------------------------------------------------------
+        控制台输出("我是SJL语言")
+        浏览器.弹窗("sjl")
+        元素样式.设置宽度(通过类名获取元素(".盒子"),500)
+        元素样式.设置高度(通过类名获取元素(".盒子"),800)
+        元素样式.设置背景颜色(通过类名获取元素(".盒子"),"#f00")
+    </script>
+</body>
+</html>
